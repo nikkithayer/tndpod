@@ -6,7 +6,13 @@
 	    
 			$( document ).ready(function() {								
 
+				$(window).scroll( function() {
+	
+				var sp = $(window).scrollTop();
 
+				$("#p1").css("background","url('bg-red3.jpg') "+(sp*-0.02)+"% "+(sp*0.02)+"% no-repeat fixed, url('bg-cyan3.jpg') 0% 0% no-repeat fixed");
+    	
+	});
 
 
 			});
@@ -43,19 +49,19 @@
 			article{
 				margin: 30px 15%;
 				padding: 30px;
-				background-color: rgba(255,255,255,0.95); 
+				background-color: white; 
 			}
 			article:hover{
-				box-shadow: 0.75px 0.75px 0 red, -0.75px -0.75px 0 cyan;				
+				box-shadow: 0.75px 0.75px 0 #ffff01, -0.75px -0.75px 0 #01ffff;				
 			}
 			article.mini{
 			}
 			span{
-				background-color: #1b2f34;
+				background-color: #0a0a0a;
 				border-radius: 3px;
 				padding: 5px 10px;
 				color: white;
-				box-shadow: 0.75px 0.75px 0 red, -0.75px -0.75px 0 cyan;				
+				box-shadow: 0.75px 0.75px 0 #ffff01, -0.75px -0.75px 0 #01ffff;				
 			}
 			article.mini span{
 			}
@@ -66,26 +72,32 @@
 				margin: 0.75em 0;
 			}
 			h1:hover{
-				text-shadow: 0px 0.75px 0 red, 0px -0.75px 0 cyan;				
+				text-shadow: 0px 0.75px 0 #ffff01, 0px -0.75px 0 #01ffff;				
 			}
 			
 			#p1{ 
-				height: 100vh;
-				background-color: rgba(236,231,228,0.8);
-				color: #1b2f34;
+				background-color: white;
+				color: #0a0a0a;
 				font-size: 1.3em;
-				padding: 20vh 15%;
-				background: url(bg-cyan.jpg) 0 0 no-repeat fixed, url(bg-red.jpg) 0 0 no-repeat fixed;
-				background-size: cover;
+				padding: 15vh 15%;
+				background: url('bg-red3.jpg') 0% 0% no-repeat fixed 100%, url('bg-cyan3.jpg') 0% 0% no-repeat fixed;
+				background-size: 100%;
 				background-blend-mode: multiply;
 			}
 			#p1 .inner{
-				background-color: rgba(236,231,228,0.8);
-				padding: 30px;
+				background-color: white;
+				padding: 50px;
+				font-size: 1.4em;
+				line-height: 1.4;
+				font-weight: 400;
+				box-shadow: 0 0 2px rgba(0,0,0,0.4);
+			}
+			#p1 .inner{
+				margin: 0 0 0.75em 0;
 			}
 			
 			#p2{
-				background-color: #1b2f34;
+				background-color: rgb(1,23,15);
 				padding: 10vh 0;
 			}
 		</style>
@@ -95,7 +107,7 @@
 			<div class="inner">
 				<h1>The Next Disruption</h1>
 				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Next Disruption is a podcast about what it takes to build a better future featuring interviews with the people who know the topic best: time travelers from the 2050s and 60s who've returned to 2016 to help change the world.</p>
 			</div>
 		</div>
 		<div id="p2">
