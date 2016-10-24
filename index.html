@@ -6,13 +6,16 @@
 	    
 			$( document ).ready(function() {								
 
+				var sp = 0;
+				bgMove();
 				$(window).scroll( function() {
-	
-				var sp = $(window).scrollTop();
-
-				$("#p1").css("background","url('bg-red3.jpg') "+(sp*-0.02)+"% "+(sp*0.02)+"% no-repeat fixed, url('bg-cyan3.jpg') 0% 0% no-repeat fixed");
-    	
-	});
+					sp = $(window).scrollTop();
+					bgMove();
+				});
+				
+				function bgMove(){
+					$("body").css({"background":"url('bg-magenta.jpg') "+(sp*0.05)+"% "+(sp*-0.03)+"% no-repeat fixed,url('bg-yellow.jpg') "+(sp*-0.02)+"% "+(sp*-0.01)+"% no-repeat fixed, url('bg-cyan3.jpg') 0% 0% no-repeat fixed","background-size":"100%"});	
+				}
 
 
 			});
@@ -43,7 +46,9 @@
 			body{
 				font-family: 'GT Walsheim', 'Helvetica Neue', 'Helvetica', sans-serif;
 				font-size: 1em;
-				margin: 0;
+				background: url('bg-red3.jpg') 0% 0% no-repeat fixed 100%, url('bg-cyan3.jpg') 0% 0% no-repeat fixed;
+				background-size: 100%;
+				background-blend-mode: multiply;
 			}
 			
 			article{
@@ -75,82 +80,93 @@
 				text-shadow: 0px 0.75px 0 #ffff01, 0px -0.75px 0 #01ffff;				
 			}
 			
-			#p1{ 
-				background-color: white;
-				color: #0a0a0a;
-				font-size: 1.3em;
-				padding: 15vh 15%;
-				background: url('bg-red3.jpg') 0% 0% no-repeat fixed 100%, url('bg-cyan3.jpg') 0% 0% no-repeat fixed;
-				background-size: 100%;
-				background-blend-mode: multiply;
-			}
-			#p1 .inner{
-				background-color: white;
-				padding: 50px;
+			.headline{
+				padding: 70px;
 				font-size: 1.4em;
 				line-height: 1.4;
 				font-weight: 400;
-				box-shadow: 0 0 2px rgba(0,0,0,0.4);
-			}
-			#p1 .inner{
-				margin: 0 0 0.75em 0;
+				background-color: rgba(255,255,255,0.95);
+				width: 50%;
+				margin: 30vh auto;
 			}
 			
 			#p2{
-				background-color: rgb(1,23,15);
 				padding: 10vh 0;
+				background-color: rgba(1,23,15,0.8);
+				position: relative;
+				z-index: 5;
+			}
+			#header{
+				position: fixed;
+				background: url('tnd-header.png') no-repeat 2% 50%, black;
+				height: 80px;
+				top: 0;
+				width: 100%;
+				z-index: 100;
+			}
+			
+			@media screen and (max-width: 720px) {
+			    .headline{
+				    width: 80%;
+				    padding: 30px;
+			    }
+			    article{
+					width: 90%;
+					margin: 30px auto;
+			    }
 			}
 		</style>
 	</head>
 	<body>
-		<div id="p1">
-			<div class="inner">
-				<h1>The Next Disruption</h1>
-				
+		<div id="header"></div>
+			<div class="headline">				
 				<p>Next Disruption is a podcast about what it takes to build a better future featuring interviews with the people who know the topic best: time travelers from the 2050s and 60s who've returned to 2016 to help change the world.</p>
 			</div>
-		</div>
+			<div class="headline">
+				<p>Written and directed by David Daw. Produced by Nikki Thayer. Cast: 
+					Avagal Milton - Julia Millburn, Allie Gilvezan - Bernadette Kerry, Nikki Thayer - Rebecca Fox, Alex Walker - Dillan Rowan, David Daw - Gabe Hartmann, Andrew Fernandez- Viktor Torres, Suzan Eraslan - HRH Representative</p>
+			</div>
 		<div id="p2">
 			<article class="mini">
 				<span class="episode-number">
 				Episode 1.5
 				</span>
 				<h1>Episode 1.5 Catching Up With Gabe</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/288092603&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>			
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/288092603&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>			
 			</article>
 				<article class="mini">
 				<span class="episode-number">
 				Episode 1.4
 				</span>
 				<h1>A Public Apology from Next Disruption</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286971757&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>				
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286971757&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>				
 			</article>
 			<article class="mini">
 				<span class="episode-number">
 				Episode 1.3
 				</span>
 				<h1>Follow Up Interview with Dillan Rowan</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286431439&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>			</article>			
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286431439&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>			</article>			
 			<article class="mini">
 				<span class="episode-number">
 				Episode 1.2
 				</span>
 				<h1>A Statement from HRH Technologies</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285911648&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285911648&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 			</article>
 			<article class="mini">
 				<span class="episode-number">
 				Episode 1.1
 				</span>
 				<h1>Bernadette's Answering Machine</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285477858&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285477858&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 			</article>
 			<article>
 				<span class="episode-number">
 				Episode 1
 				</span>
 				<h1>Engineering the Future</h1>
-				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283098174&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283098174&amp;color=01170f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 			</article>
 		</div>
 
