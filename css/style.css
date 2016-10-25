@@ -1,0 +1,93 @@
+* {
+  -webkit-transition: all 0.15s ease; }
+
+@font-face {
+  font-family: 'Museo Slab';
+  src: url("../webfonts/Museo_Slab_500_2-webfont.eot");
+  src: url("../webfonts/Museo_Slab_500_2-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/Museo_Slab_500_2-webfont.woff2") format("woff2"), url("../webfonts/Museo_Slab_500_2-webfont.woff") format("woff"), url("webfonts/Museo_Slab_500_2-webfont.ttf") format("truetype"), url("../webfonts/Museo_Slab_500_2-webfont.svg#museo_slab500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("../webfonts/GT-Walsheim-Regular.eot");
+  src: url("../webfonts/GT-Walsheim-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/GT-Walsheim-Regular.woff") format("woff"), url("../webfonts/GT-Walsheim-Regular.ttf") format("truetype");
+  font-style: normal; }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("../webfonts/GT-Walsheim-Bold.eot");
+  src: url("../webfonts/GT-Walsheim-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/GT-Walsheim-Bold.woff") format("woff"), url("../webfonts/GT-Walsheim-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+body{
+	font-family: 'GT Walsheim', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-size: 1em;
+	background: url('../images/bg-magenta.jpg') 0% 0% repeat-y fixed, url('../images/bg-yellow.jpg') 0% 0% repeat-y fixed, url('../images/bg-cyan.jpg') 0% 0% repeat-y fixed;
+	background-size: 100%;
+	background-blend-mode: multiply;
+}
+
+article{
+	margin: 30px 15%;
+	padding: 30px;
+	background-color: white; 
+}
+article:hover{
+	box-shadow: 0.75px 0.75px 0 #ffff01, -0.75px -0.75px 0 #01ffff;				
+}
+article.mini{
+}
+span{
+	background-color: #0a0a0a;
+	border-radius: 3px;
+	padding: 5px 10px;
+	color: white;
+	box-shadow: 0.75px 0.75px 0 #ffff01, -0.75px -0.75px 0 #01ffff;				
+}
+article.mini span{
+}
+
+h1{
+	font-size: 1.75em;
+	font-weight: 800;
+	margin: 0.75em 0;
+}
+h1:hover{
+	text-shadow: 0px 0.75px 0 #ffff01, 0px -0.75px 0 #01ffff;				
+}
+
+.headline{
+	padding: 70px;
+	font-size: 1.4em;
+	line-height: 1.4;
+	font-weight: 400;
+	background-color: rgba(255,255,255,0.95);
+	width: 50%;
+	margin: 30vh auto;
+}
+
+#p2{
+	padding: 10vh 0;
+	background-color: rgba(1,23,15,0.85);
+	position: relative;
+	z-index: 5;
+}
+#header{
+	position: fixed;
+	background: url('../images/tnd-header.png') no-repeat 2% 50%, black;
+	height: 80px;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+@media screen and (max-width: 720px) {
+    .headline{
+	    width: 80%;
+	    padding: 30px;
+    }
+    article{
+		width: 90%;
+		margin: 30px auto;
+    }
+}
