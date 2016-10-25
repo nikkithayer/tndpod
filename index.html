@@ -5,9 +5,7 @@
     <script type="text/javascript">
 
 //TODO TONIGHT
-//Compress yellow and magenta images
 //Try one last time to figure out how to make it go sideways
-//Set background size to cover for mobile in a way that works with the js
 //Check order of information with David
 	    
 			$( document ).ready(function() {								
@@ -20,7 +18,7 @@
 				});
 				
 				function bgMove(){
-					$("body").css({"background":"url('bg-magenta.jpg') "+(sp*0.05)+"% "+(sp*-0.03)+"% no-repeat fixed,url('bg-yellow.jpg') "+(sp*-0.02)+"% "+(sp*-0.01)+"% no-repeat fixed, url('bg-cyan3.jpg') 0% 0% no-repeat fixed","background-size":"100%"});	
+					$("body").css({"background":"url('bg-magenta.jpg') "+(sp*0.05)+"% "+(sp*-0.03)+"% repeat-y fixed,url('bg-yellow.jpg') "+(sp*-0.02)+"% "+(sp*-0.01)+"% repeat-y fixed, url('bg-cyan.jpg') 0% 0% repeat-y fixed","background-size":"100%"});	
 				}
 
 
@@ -52,7 +50,7 @@
 			body{
 				font-family: 'GT Walsheim', 'Helvetica Neue', 'Helvetica', sans-serif;
 				font-size: 1em;
-				background: url('bg-red3.jpg') 0% 0% no-repeat fixed 100%, url('bg-cyan3.jpg') 0% 0% no-repeat fixed;
+				background: url('bg-magenta.jpg') 0% 0% repeat-y fixed, url('bg-yellow.jpg') 0% 0% repeat-y fixed, url('bg-cyan.jpg') 0% 0% repeat-y fixed;
 				background-size: 100%;
 				background-blend-mode: multiply;
 			}
@@ -104,7 +102,7 @@
 			}
 			#header{
 				position: fixed;
-				background: url('tnd-header.png') no-repeat 2% 50%, black;
+				background: url('tnd-header.png') repeat-y 2% 50%, black;
 				height: 80px;
 				top: 0;
 				width: 100%;
