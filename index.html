@@ -18,6 +18,7 @@
 				});
 				
 				function bgMove(){
+					console.log("fire!");
 					$("body").css({"background":"url('bg-magenta.jpg') "+(sp*0.05)+"% "+(sp*-0.03)+"% repeat-y fixed,url('bg-yellow.jpg') "+(sp*-0.02)+"% "+(sp*-0.01)+"% repeat-y fixed, url('bg-cyan.jpg') 0% 0% repeat-y fixed","background-size":"100%"});	
 				}
 
@@ -102,7 +103,7 @@
 			}
 			#header{
 				position: fixed;
-				background: url('tnd-header.png') repeat-y 2% 50%, black;
+				background: url('tnd-header.png') no-repeat 2% 50%, black;
 				height: 80px;
 				top: 0;
 				width: 100%;
